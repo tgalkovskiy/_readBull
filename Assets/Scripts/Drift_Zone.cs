@@ -32,14 +32,7 @@ public class Drift_Zone : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        /*if (Rot_rigth && !Rot_left)
-        {
-           other.transform.Rotate(0,Angle_rot,0); 
-        }
-        if (Rot_left && !Rot_rigth)
-        {
-            other.transform.Rotate(0,-Angle_rot,0); 
-        }*/
+        other.GetComponent<MainDir>().Score += 1;
     }
 
     private void OnTriggerExit(Collider other)
