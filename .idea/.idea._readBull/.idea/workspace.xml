@@ -12,12 +12,21 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/a5/f145a945/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BezierNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bezier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BezierCurve.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BezierCurve.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BezierCurvesComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BezierCurvesAdjustment.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BezierCurves.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/editor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ryejXITcq46TasvDqrpQImqqvK" />
@@ -75,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1619952893209</updated>
       <workItem from="1619952903515" duration="3948000" />
+      <workItem from="1620058554766" duration="13868000" />
     </task>
     <servers />
   </component>

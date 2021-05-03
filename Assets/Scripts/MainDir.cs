@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class MainDir : MonoBehaviour
 {
+    public Transform[] Points;
+    
     public float Speed_X = 7;
     public float Speed_Z = 5;
     public Camera _Camera;
@@ -20,15 +22,29 @@ public class MainDir : MonoBehaviour
     private bool Left = false;
     private float Speed;
     private float _time;
+    public float timer;
     private void Awake()
     {
         Player = GetComponent<Rigidbody>();
         Speed = Speed_Z;
+        //Debug.Log(Points.Count);
     }
 
     private void Update()
     {
-        _time += Time.deltaTime;
+        timer += Time.deltaTime / 3;
+        transform.position = Bezier.GetPoint(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer);
+        transform.rotation = Quaternion.LookRotation(Bezier.GetFirstDerivative(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer));
+        
+        /*if (this.transform.position.z >= Points[3].position.z)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+               Points.RemoveAt(0); 
+            }
+            timer = 0;
+        }*/
+        /*_time += Time.deltaTime;
         x_dir = 0;
         if (Input.GetKey(KeyCode.D) || Rigth)
         {
@@ -38,9 +54,8 @@ public class MainDir : MonoBehaviour
         {
             x_dir = -1;
         }
-
         Vector3 Global_Dir = new Vector3(x_dir * Speed_X * Time.deltaTime, 0, z_dir * Speed_Z * Time.deltaTime);
-        transform.Translate(Global_Dir, Space.Self);
+        transform.Translate(Global_Dir, Space.Self);*/
         _timer.text = ((int)_time).ToString();
         _score.text = Score.ToString();
         //this.transform.localPosition += Global_Dir;
@@ -58,6 +73,20 @@ public class MainDir : MonoBehaviour
         //Player.AddRelativeForce(Vector3.up*3);
 
     }
+    
+    /*private void OnDrawGizmos() {
+
+        int sigmentsNumber = 20;
+        Vector3 preveousePoint = Points[0].position;
+
+        for (int i = 0; i < sigmentsNumber + 1; i++) {
+            float paremeter = (float)i / sigmentsNumber;
+            Vector3 point = Bezier.GetPoint(Points[0].position, Points[1].position, Points[2].position, Points[3].position, paremeter);
+            Gizmos.DrawLine(preveousePoint, point);
+            preveousePoint = point;
+        }
+
+    }*/
     
     public void Forsage()
     {
