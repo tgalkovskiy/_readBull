@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class Drift_Zone : MonoBehaviour
     public Transform[] P;
     /*public Transform P2;
     public Transform P3;
-    public Transform P4;*/
+    public Transform P4;#1#
     //public float Angle_rot;
     //public AnimationCurve _Curve;
     public float Change_Speed =1;
@@ -26,7 +27,7 @@ public class Drift_Zone : MonoBehaviour
             A.timer = 0;
         }
         /*DOTween.To(() => other.GetComponent<MainDir>().Speed_Z, x => other.GetComponent<MainDir>().Speed_Z = x,
-            other.GetComponent<MainDir>().Speed_Z / Change_Speed, 1);*/
+            other.GetComponent<MainDir>().Speed_Z / Change_Speed, 1);#1#
 
         /*if (Rot_rigth && !Rot_left)
         {
@@ -35,7 +36,7 @@ public class Drift_Zone : MonoBehaviour
         if (Rot_left && !Rot_rigth)
         {
             Angle_rot *= -1;
-        }*/
+        }#1#
         //other.transform.DOLocalRotateQuaternion(Quaternion.Euler(0,Angle_rot,0), 1f);
 
         //other.transform.DORotateQuaternion();
@@ -49,14 +50,14 @@ public class Drift_Zone : MonoBehaviour
         //other.transform.rotation *= Quaternion.Euler(0,_Curve.Evaluate(Timer), 0);
         /*Timer += Time.deltaTime / 2;
         other.transform.position = Bezier.GetPoint(P1.position, P2.position, P3.position, P4.position, Timer);
-        other.transform.rotation = Quaternion.LookRotation(Bezier.GetFirstDerivative(P1.position, P2.position, P3.position, P4.position, Timer));*/
+        other.transform.rotation = Quaternion.LookRotation(Bezier.GetFirstDerivative(P1.position, P2.position, P3.position, P4.position, Timer));#1#
     }
 
     /*private void OnTriggerExit(Collider other)
     {
         DOTween.To(() => other.GetComponent<MainDir>().Speed_Z, x => other.GetComponent<MainDir>().Speed_Z = x,
             other.GetComponent<MainDir>().Speed_Z * Change_Speed, 1);
-    }*/
+    }#1#
     
     private void OnDrawGizmos() {
 
@@ -72,3 +73,4 @@ public class Drift_Zone : MonoBehaviour
 
     }
 }
+*/

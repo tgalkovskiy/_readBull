@@ -433,7 +433,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 12498ed9b8315424492ce501bce9b821,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12498ed9b8315424492ce501bce9b821,
         type: 3}
@@ -856,6 +856,7 @@ MonoBehaviour:
   - {fileID: 744950849}
   - {fileID: 731151146}
   Change_Speed: 1
+  Timer: 0
 --- !u!65 &293657346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -879,7 +880,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b5314ff3e037c734aa2afc3845b019b6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5314ff3e037c734aa2afc3845b019b6,
         type: 3}
@@ -1593,6 +1594,7 @@ MonoBehaviour:
   - {fileID: 518195847}
   - {fileID: 1342668933}
   Change_Speed: 1
+  Timer: 0
 --- !u!65 &529740248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2476,7 +2478,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3575e801d8cec4a4bbdc0043d4a6a79b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3575e801d8cec4a4bbdc0043d4a6a79b,
         type: 3}
@@ -2713,7 +2715,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1f24e2e5052f16e4d82ba330ec614f0d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f24e2e5052f16e4d82ba330ec614f0d,
         type: 3}
@@ -3156,18 +3158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4ed42d4296af024397742a009a0b683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Points:
-  - {fileID: 788817381}
-  - {fileID: 647958543}
-  - {fileID: 1874037157}
-  - {fileID: 1951893977}
-  Speed_X: 7
-  Speed_Z: 15
-  _Camera: {fileID: 1687258584}
-  _timer: {fileID: 722936047}
-  _score: {fileID: 576934251}
-  Score: 0
+  speed: 5
   timer: 0
+  pathCreator: {fileID: 1060682827}
+  end: 0
 --- !u!23 &1030234426
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3236,6 +3230,98 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1060682826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1060682828}
+  - component: {fileID: 1060682827}
+  m_Layer: 0
+  m_Name: Path
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1060682827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060682826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -0.31755063, y: 0.1959863, z: -0.070224755}
+      - {x: -0.30780292, y: 0.061258353, z: 0.13388442}
+      - {x: -0.118354104, y: -1.0628994, z: 14.868933}
+      - {x: -0.06569304, y: -1.16947, z: 20.409525}
+      - {x: -0.055364676, y: -1.1903716, z: 21.496199}
+      - {x: 0.34737006, y: 0.6704242, z: 55.15416}
+      - {x: 0.17104028, y: -0.21806917, z: 65.516914}
+      - {x: 0.10059924, y: -0.57300866, z: 69.65668}
+      - {x: 0.14159484, y: 0.43063998, z: 114.64042}
+      - {x: 0.13343304, y: 0.43100753, z: 114.666046}
+      isClosed: 0
+      space: 0
+      controlMode: 0
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 0
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 2
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 0
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 1
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 0
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!4 &1060682828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060682826}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 10.03, y: 0.187, z: -1.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1350116218}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1061778358
 GameObject:
   m_ObjectHideFlags: 0
@@ -4102,6 +4188,7 @@ Transform:
   - {fileID: 249083225}
   - {fileID: 790500971}
   - {fileID: 313047655}
+  - {fileID: 1060682828}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4188,6 +4275,7 @@ MonoBehaviour:
   - {fileID: 709274986}
   - {fileID: 255421115}
   Change_Speed: 1
+  Timer: 0
 --- !u!65 &1433532296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5044,7 +5132,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2a00509b071a31c4d8d840e89b97f5fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2a00509b071a31c4d8d840e89b97f5fe,
         type: 3}
@@ -5464,6 +5552,7 @@ MonoBehaviour:
   - {fileID: 1874037157}
   - {fileID: 1951893977}
   Change_Speed: 1
+  Timer: 0
 --- !u!65 &1845313721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5764,6 +5853,7 @@ MonoBehaviour:
   - {fileID: 1487466085}
   - {fileID: 1174531791}
   Change_Speed: 1
+  Timer: 0
 --- !u!1 &1951893976
 GameObject:
   m_ObjectHideFlags: 0

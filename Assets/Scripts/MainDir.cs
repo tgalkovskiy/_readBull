@@ -2,39 +2,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using PathCreation;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MainDir : MonoBehaviour
 {
-    public Transform[] Points;
-    
-    public float Speed_X = 7;
-    public float Speed_Z = 5;
-    public Camera _Camera;
-    public Text _timer;
-    public Text _score;
-    [HideInInspector] public int Score =0;
-    private float x_dir;
-    private float z_dir = 1;
-    private Rigidbody Player;
-    private bool Rigth = false;
-    private bool Left = false;
-    private float Speed;
+   
+    public float speed;
+    float dstTravelled;
     private float _time;
     public float timer;
+    public PathCreator pathCreator;
+    public EndOfPathInstruction end;
     private void Awake()
     {
-        Player = GetComponent<Rigidbody>();
-        Speed = Speed_Z;
-        //Debug.Log(Points.Count);
-    }
 
+    }
+    
     private void Update()
     {
-        timer += Time.deltaTime / 3;
-        transform.position = Bezier.GetPoint(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer);
-        transform.rotation = Quaternion.LookRotation(Bezier.GetFirstDerivative(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer));
+        dstTravelled += speed * Time.deltaTime;
+        transform.position = pathCreator.path.GetPointAtDistance(dstTravelled, end);
+        transform.rotation = pathCreator.path.GetRotationAtDistance(dstTravelled, end);
+        //timer += Time.deltaTime / 3;
+        //transform.position = Bezier.GetPoint(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer);
+        //transform.rotation = Quaternion.LookRotation(Bezier.GetFirstDerivative(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer));
         
         /*if (this.transform.position.z >= Points[3].position.z)
         {
@@ -56,8 +49,8 @@ public class MainDir : MonoBehaviour
         }
         Vector3 Global_Dir = new Vector3(x_dir * Speed_X * Time.deltaTime, 0, z_dir * Speed_Z * Time.deltaTime);
         transform.Translate(Global_Dir, Space.Self);*/
-        _timer.text = ((int)_time).ToString();
-        _score.text = Score.ToString();
+        //_timer.text = ((int)_time).ToString();
+        //_score.text = Score.ToString();
         //this.transform.localPosition += Global_Dir;
         /*Vector3 GlobalDir = Vector3.forward;
         GlobalDir += new Vector3()*/
@@ -88,7 +81,7 @@ public class MainDir : MonoBehaviour
 
     }*/
     
-    public void Forsage()
+    /*public void Forsage()
     {
         DOTween.To(() => Speed_Z, x => Speed_Z = x,
             Speed_Z *1.5f, 2);
@@ -117,7 +110,7 @@ public class MainDir : MonoBehaviour
     public void Up_Left_touch()
     {
          Left = false;
-    }
+    }*/
     
     
 }
