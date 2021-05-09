@@ -1,34 +1,50 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using DG.Tweening;
 using PathCreation;
 using UnityEngine;
 using UnityEngine.UI;
+using Quaternion = UnityEngine.Quaternion;
+using Vector2 = System.Numerics.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class MainDir : MonoBehaviour
 {
-   
     public float speed;
+    [SerializeField] private Path1 _line;
+    List<Vector3> path = new List<Vector3>();
+    private List<Quaternion> Rot = new List<Quaternion>();
+    private int a = 0;
+    /*public float speed;
     float dstTravelled;
     private float _time;
     public float timer;
     public PathCreator pathCreator;
-    public EndOfPathInstruction end;
+    public EndOfPathInstruction end;*/
     private void Awake()
     {
-
+        //Debug.Log(_line.positionCount);
+        for (int i = 0; i < _line.Point_path.Count; i++)
+        {
+            path.Add(_line.Point_path[i].transform.position);
+            Rot.Add(_line.Point_path[i].transform.rotation);
+        }
     }
     
     private void Update()
     {
-        dstTravelled += speed * Time.deltaTime;
-        transform.position = pathCreator.path.GetPointAtDistance(dstTravelled, end);
-        transform.rotation = pathCreator.path.GetRotationAtDistance(dstTravelled, end);
+        transform.position = Vector3.MoveTowards(transform.position, path[a], Time.deltaTime*speed);
+        if (Math.Abs(transform.position.x-path[a].x)<0.1f || Math.Abs(transform.position.z-path[a].z)<0.1f)
+        {
+            transform.DORotateQuaternion(_line.Point_path[a].transform.rotation, 1f);
+            a++;
+        }
         //timer += Time.deltaTime / 3;
         //transform.position = Bezier.GetPoint(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer);
         //transform.rotation = Quaternion.LookRotation(Bezier.GetFirstDerivative(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer));
-        
+
         /*if (this.transform.position.z >= Points[3].position.z)
         {
             for (int i = 0; i < 3; i++)

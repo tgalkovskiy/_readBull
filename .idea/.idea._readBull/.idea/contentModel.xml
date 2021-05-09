@@ -76,6 +76,7 @@
           <e p="Forfard_road.cs" t="Include" />
           <e p="MainDir.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
+          <e p="Path1.cs" t="Include" />
           <e p="Road.cs" t="Include" />
           <e p="Rot_road.cs" t="Include" />
         </e>
