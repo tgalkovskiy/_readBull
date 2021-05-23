@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Cinemachine;
 using DG.Tweening;
 using PathCreation;
 using UnityEngine;
@@ -12,48 +13,22 @@ using Vector3 = UnityEngine.Vector3;
 
 public class MainDir : MonoBehaviour
 {
-    public float speed;
-    [SerializeField] private Path1 _line;
-    List<Vector3> path = new List<Vector3>();
-    private List<Quaternion> Rot = new List<Quaternion>();
-    private int a = 0;
-    /*public float speed;
-    float dstTravelled;
-    private float _time;
-    public float timer;
-    public PathCreator pathCreator;
-    public EndOfPathInstruction end;*/
+    public CinemachineDollyCart cinemachineDollyCart;
+    public float speedX;
+    public Camera _Camera;
+    private float x_dir = 0;
+    private Rigidbody Player;
+    private bool Rigth = false;
+    private bool Left = false;
     private void Awake()
     {
-        //Debug.Log(_line.positionCount);
-        for (int i = 0; i < _line.Point_path.Count; i++)
-        {
-            path.Add(_line.Point_path[i].transform.position);
-            Rot.Add(_line.Point_path[i].transform.rotation);
-        }
+        Player = this.GetComponent<Rigidbody>();
     }
-    
+
+    private bool MovLeft = true;
+    private bool Moverigth = true;
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, path[a], Time.deltaTime*speed);
-        if (Math.Abs(transform.position.x-path[a].x)<0.1f || Math.Abs(transform.position.z-path[a].z)<0.1f)
-        {
-            transform.DORotateQuaternion(_line.Point_path[a].transform.rotation, 1f);
-            a++;
-        }
-        //timer += Time.deltaTime / 3;
-        //transform.position = Bezier.GetPoint(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer);
-        //transform.rotation = Quaternion.LookRotation(Bezier.GetFirstDerivative(Points[0].position, Points[1].position, Points[2].position, Points[3].position, timer));
-
-        /*if (this.transform.position.z >= Points[3].position.z)
-        {
-            for (int i = 0; i < 3; i++)
-            {
-               Points.RemoveAt(0); 
-            }
-            timer = 0;
-        }*/
-        /*_time += Time.deltaTime;
         x_dir = 0;
         if (Input.GetKey(KeyCode.D) || Rigth)
         {
@@ -63,53 +38,23 @@ public class MainDir : MonoBehaviour
         {
             x_dir = -1;
         }
-        Vector3 Global_Dir = new Vector3(x_dir * Speed_X * Time.deltaTime, 0, z_dir * Speed_Z * Time.deltaTime);
-        transform.Translate(Global_Dir, Space.Self);*/
-        //_timer.text = ((int)_time).ToString();
-        //_score.text = Score.ToString();
-        //this.transform.localPosition += Global_Dir;
-        /*Vector3 GlobalDir = Vector3.forward;
-        GlobalDir += new Vector3()*/
-        //Player.AddForce(Global_Dir*Speed_Z);
-        /*if (Player.velocity.magnitude < 20)
-        {
-          Player.AddRelativeForce(Global_Dir*Speed_Z);  
-        }*/
-        /*if (Car.transform.localPosition.z > Hint)
-        {
-            New_Road();
-        }*/
-        //Player.AddRelativeForce(Vector3.up*3);
+        Vector3 Global_Dir = new Vector3(x_dir * speedX * Time.deltaTime, 0, 0);
+        transform.Translate(Global_Dir, Space.Self);
+        
 
     }
     
-    /*private void OnDrawGizmos() {
-
-        int sigmentsNumber = 20;
-        Vector3 preveousePoint = Points[0].position;
-
-        for (int i = 0; i < sigmentsNumber + 1; i++) {
-            float paremeter = (float)i / sigmentsNumber;
-            Vector3 point = Bezier.GetPoint(Points[0].position, Points[1].position, Points[2].position, Points[3].position, paremeter);
-            Gizmos.DrawLine(preveousePoint, point);
-            preveousePoint = point;
-        }
-
-    }*/
-    
-    /*public void Forsage()
+    public void Forsage()
     {
-        DOTween.To(() => Speed_Z, x => Speed_Z = x,
-            Speed_Z *1.5f, 2);
-        DOTween.To(() => _Camera.fieldOfView, x => _Camera.fieldOfView = x,
-            85, 2);
+        DOTween.To(() => cinemachineDollyCart.m_Speed, x => cinemachineDollyCart.m_Speed = x,
+            cinemachineDollyCart.m_Speed *2f, 0.5f);
+        DOTween.To(() => _Camera.fieldOfView, x => _Camera.fieldOfView = x,85, 1);
     }
     public void end_Forsage()
     {
-        DOTween.To(() => Speed_Z, x => Speed_Z = x,
-            Speed, 2);
-        DOTween.To(() => _Camera.fieldOfView, x => _Camera.fieldOfView = x,
-            60, 2);
+        DOTween.To(() => cinemachineDollyCart.m_Speed, x => cinemachineDollyCart.m_Speed = x,
+            30, 0.5f);
+        DOTween.To(() => _Camera.fieldOfView, x => _Camera.fieldOfView = x,60, 1);
     }
     public void Rigth_touch()
     {
@@ -126,7 +71,7 @@ public class MainDir : MonoBehaviour
     public void Up_Left_touch()
     {
          Left = false;
-    }*/
+    }
     
     
 }
