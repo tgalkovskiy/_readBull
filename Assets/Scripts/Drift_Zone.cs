@@ -8,6 +8,7 @@ using Cinemachine;
 
 public class Drift_Zone : MonoBehaviour
 {
+    public float Speed_drift;
     public AnimationCurve curve;
     private float time = 0;
     CinemachineDollyCart cinemachineDollyCart;
@@ -15,7 +16,9 @@ public class Drift_Zone : MonoBehaviour
     {
         cinemachineDollyCart = other.GetComponent<MainDir>().cinemachineDollyCart;
         DOTween.To(() => cinemachineDollyCart.m_Speed, x => cinemachineDollyCart.m_Speed = x,
-            35, 0.5f);
+            Speed_drift, 0.5f);
+        Camsingle.Instance._CinemachineMain.Priority = 5;
+        Camsingle.Instance._CameraDrift.Priority = 10;
     }
     private void OnTriggerStay(Collider other)
     {
@@ -28,8 +31,10 @@ public class Drift_Zone : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         DOTween.To(() => cinemachineDollyCart.m_Speed, x => cinemachineDollyCart.m_Speed = x,
-            50, 0.5f);
+            70, 0.5f);
         other.transform.DOLocalRotate(Vector3.zero, 1);
+        Camsingle.Instance._CinemachineMain.Priority = 10;
+        Camsingle.Instance._CameraDrift.Priority = 5;
     }
 }
 

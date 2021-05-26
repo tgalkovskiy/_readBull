@@ -72,6 +72,7 @@
           <e p="Bezier.cs" t="Include" />
           <e p="BezierCurve.cs" t="Include" />
           <e p="BezierNode.cs" t="Include" />
+          <e p="Camsingle.cs" t="Include" />
           <e p="Drift_Zone.cs" t="Include" />
           <e p="Forfard_road.cs" t="Include" />
           <e p="MainDir.cs" t="Include" />
