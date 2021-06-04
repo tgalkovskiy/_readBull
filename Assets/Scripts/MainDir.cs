@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Numerics;
 using Cinemachine;
 using DG.Tweening;
-using PathCreation;
 using UnityEngine;
 using UnityEngine.UI;
 using Quaternion = UnityEngine.Quaternion;
@@ -15,7 +14,7 @@ public class MainDir : MonoBehaviour
 {
     public CinemachineDollyCart cinemachineDollyCart;
     public float speedX;
-    public Camera _Camera;
+    public GameObject trail;
     private float x_dir = 0;
     private Rigidbody Player;
     private bool Rigth = false;
@@ -44,18 +43,18 @@ public class MainDir : MonoBehaviour
 
     }
     
-    public void Forsage()
+    /*public void Forsage()
     {
         DOTween.To(() => cinemachineDollyCart.m_Speed, x => cinemachineDollyCart.m_Speed = x,
             cinemachineDollyCart.m_Speed *2f, 0.5f);
         DOTween.To(() => _Camera.fieldOfView, x => _Camera.fieldOfView = x,85, 1);
-    }
-    public void end_Forsage()
+    }*/
+    /*public void end_Forsage()
     {
         DOTween.To(() => cinemachineDollyCart.m_Speed, x => cinemachineDollyCart.m_Speed = x,
             30, 0.5f);
         DOTween.To(() => _Camera.fieldOfView, x => _Camera.fieldOfView = x,60, 1);
-    }
+    }*/
     public void Rigth_touch()
     {
          Rigth = true;

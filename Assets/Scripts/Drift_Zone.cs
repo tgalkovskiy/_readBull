@@ -19,6 +19,8 @@ public class Drift_Zone : MonoBehaviour
             Speed_drift, 0.5f);
         Camsingle.Instance._CinemachineMain.Priority = 5;
         Camsingle.Instance._CameraDrift.Priority = 10;
+        TrailRender.Instance.ActivTrail();
+        //other.GetComponent<MainDir>().trail.SetActive(true);
     }
     private void OnTriggerStay(Collider other)
     {
@@ -35,6 +37,8 @@ public class Drift_Zone : MonoBehaviour
         other.transform.DOLocalRotate(Vector3.zero, 1);
         Camsingle.Instance._CinemachineMain.Priority = 10;
         Camsingle.Instance._CameraDrift.Priority = 5;
+        TrailRender.Instance.DeactivTrail();
+        //other.GetComponent<MainDir>().trail.SetActive(false);
     }
 }
 
