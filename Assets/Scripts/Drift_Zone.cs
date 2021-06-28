@@ -15,6 +15,7 @@ public class Drift_Zone : MonoBehaviour
 
     MainDir _mainDir;
 
+    private int scornow = 0;
     private void Start()
     {
         _mainDir = MainDir.Instance;
@@ -22,6 +23,7 @@ public class Drift_Zone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         cinemachineDollyCart = other.GetComponent<MainDir>().cinemachineDollyCart;
         DOTween.To(() => cinemachineDollyCart.m_Speed, x => cinemachineDollyCart.m_Speed = x,
             Speed_drift, 0.5f);
@@ -37,20 +39,21 @@ public class Drift_Zone : MonoBehaviour
            _mainDir.arrow.transform.rotation *= rotnowarrow; 
         }
         time += Time.deltaTime;
-        if (_mainDir.arrow.transform.rotation.z == 0)
+        if (Mathf.Abs(_mainDir.arrow.transform.rotation.z)>0.1f)
         {
-            Menu.Score += 3; 
+            scornow += 3; 
         }
-        else if (_mainDir.arrow.transform.rotation.z < 0.2f && _mainDir.arrow.transform.rotation.z > -0.2f)
+        else if (Mathf.Abs(_mainDir.arrow.transform.rotation.z)>0.3f)
         {
-            Menu.Score += 2;
+            scornow += 2;
         }
-        else if (_mainDir.arrow.transform.rotation.z < 0.5f && _mainDir.arrow.transform.rotation.z > -0.5f)
+        else if (Mathf.Abs(_mainDir.arrow.transform.rotation.z)>0.5f)
         {
-            Menu.Score += 1;
+            scornow += 1;
         }
-        
-       
+
+        Menu.Scorenow = scornow;
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -59,6 +62,8 @@ public class Drift_Zone : MonoBehaviour
             70, 0.5f);
         other.transform.DOLocalRotate(Vector3.zero, 1);
         TrailRender.Instance.DeactivTrail();
+        Menu.Score += scornow;
+         scornow = 0;
     }
 }
 
