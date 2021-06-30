@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06c8ab27-4e1c-4c49-8bbf-e76ceb43ad19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,7 @@
       <workItem from="1623098712427" duration="1638000" />
       <workItem from="1623335840531" duration="2422000" />
       <workItem from="1623340623113" duration="687000" />
-      <workItem from="1624868860555" duration="2620000" />
+      <workItem from="1624868860555" duration="3903000" />
     </task>
     <servers />
   </component>
