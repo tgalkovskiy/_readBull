@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06c8ab27-4e1c-4c49-8bbf-e76ceb43ad19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeGrenade AB.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JMO Assets/WarFX/Desktop/Materials/Smoke/WFX_M_SmokeGrenade AB.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Materials/Poster_1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Materials/Poster_1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Mazda Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Mazda Material 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/trasa_Blu.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/trasa_Blu.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrailRender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrailRender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/NISAN_SILVIA_lambert1_BaseMap.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/NISAN_SILVIA_lambert1_BaseMap.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefab/lambert2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefab/lambert2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +34,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/a5/f145a945/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TrailRender.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.4/Runtime/Behaviours/CinemachineDollyCart.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camsingle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/a9/a3acd14a/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Loader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SciptableObj/ChoisCar.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -29,10 +51,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Path.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Path1.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Camsingle.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/TrailRender.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MoveAnyCar.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TrailRender.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Loader.cs" />
+      <option value="$PROJECT_DIR$/Assets/SciptableObj/ChoisCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" />
     </changedPaths>
   </component>
@@ -105,6 +129,10 @@
       <workItem from="1623335840531" duration="2422000" />
       <workItem from="1623340623113" duration="687000" />
       <workItem from="1624868860555" duration="3903000" />
+      <workItem from="1625087579611" duration="598000" />
+      <workItem from="1625917739981" duration="8913000" />
+      <workItem from="1626342463448" duration="5623000" />
+      <workItem from="1626360170799" duration="4474000" />
     </task>
     <servers />
   </component>
@@ -113,6 +141,18 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

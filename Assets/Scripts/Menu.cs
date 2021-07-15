@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
@@ -25,4 +26,5 @@ public class Menu : MonoBehaviour
         score.text = Score.ToString();
         scorenow.text = Scorenow.ToString();
     }
+    
 }

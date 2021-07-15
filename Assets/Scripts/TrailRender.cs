@@ -7,7 +7,7 @@ using UnityEngine;
 public class TrailRender : MonoBehaviour
 {
     public TrailRenderer[] TrailRenders;
-
+    public GameObject[] smoke;
     public static TrailRender Instance;
 
     private void Awake()
@@ -30,6 +30,22 @@ public class TrailRender : MonoBehaviour
         {
             DOTween.To(() => I.startWidth, x => I.startWidth = x,
                 0.2f, 0.5f);
+        }
+    }
+
+    public void MoreSmoke()
+    {
+        foreach (var smoke in smoke)
+        {
+            smoke.transform.DOScale(new Vector3(5, 5, 5), 4f);
+        }
+    }
+
+    public void HideSmoke()
+    {
+        foreach (var smoke in smoke)
+        {
+            smoke.transform.DOScale(new Vector3(0.4f, 0.4f, 0.4f), 4f);
         }
     }
 }

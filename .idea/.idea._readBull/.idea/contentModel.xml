@@ -82,9 +82,13 @@
             </e>
           </e>
         </e>
+        <e p="SciptableObj" t="Include">
+          <e p="ChoisCar.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Camsingle.cs" t="Include" />
           <e p="Drift_Zone.cs" t="Include" />
+          <e p="Loader.cs" t="Include" />
           <e p="MainDir.cs" t="Include" />
           <e p="Menu.cs" t="Include" />
           <e p="MoveAnyCar.cs" t="Include" />
