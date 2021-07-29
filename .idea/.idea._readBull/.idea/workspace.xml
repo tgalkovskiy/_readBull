@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06c8ab27-4e1c-4c49-8bbf-e76ceb43ad19" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea._readBull/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +43,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Loader.cs" />
       <option value="$PROJECT_DIR$/Assets/SciptableObj/ChoisCar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainDir.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/RootBarrier.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Drift_Zone.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Finish.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ryejXITcq46TasvDqrpQImqqvK" />
@@ -121,6 +126,7 @@
       <workItem from="1626717572861" duration="1031000" />
       <workItem from="1626966927187" duration="3442000" />
       <workItem from="1627223144301" duration="2908000" />
+      <workItem from="1627564243495" duration="791000" />
     </task>
     <servers />
   </component>

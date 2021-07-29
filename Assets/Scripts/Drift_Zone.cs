@@ -76,6 +76,10 @@ public class Drift_Zone : MonoBehaviour
         TrailRender.Instance.HideSmoke();
         audioSource.Stop();
         MainDir.isstrafe = true;
+        if(GetComponent<Finish>())
+        {
+            GetComponent<Finish>().enabled= true;
+        }
         
     }
 
