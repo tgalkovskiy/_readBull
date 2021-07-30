@@ -63,7 +63,7 @@ public class MainDir : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            if (transform.localPosition.x > -3.5f && isstrafe)
+            if (transform.localPosition.x > -3f && isstrafe)
             {
                transform.Translate(Vector3.left*Time.deltaTime*speed, Space.Self); 
             }
@@ -74,7 +74,7 @@ public class MainDir : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            if (transform.localPosition.x < 4f && isstrafe)
+            if (transform.localPosition.x < 3.5f && isstrafe)
             {
                 transform.Translate(Vector3.right*Time.deltaTime*speed, Space.Self); 
             }
