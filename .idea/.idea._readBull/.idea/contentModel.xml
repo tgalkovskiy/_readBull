@@ -94,6 +94,7 @@
           <e p="Menu.cs" t="Include" />
           <e p="MoveAnyCar.cs" t="Include" />
           <e p="RootBarrier.cs" t="Include" />
+          <e p="TableScore.cs" t="Include" />
           <e p="Test.cs" t="Include" />
           <e p="TrailRender.cs" t="Include" />
           <e p="Tutorial.cs" t="Include" />
