@@ -3,21 +3,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
+    [SerializeField] private Sprite _roma;
+    [SerializeField] private Sprite _kate;
+    [SerializeField] private Image _tutor1;
+    [SerializeField] private Text _tutor1Text;
+    [SerializeField] private Image _tutor2;
+    [SerializeField] private Text _tutor2Text;
     [SerializeField] private float delaystartfirsttutor = default;
     [SerializeField] private float delaystartfirstdrift = default;
     [SerializeField] private Transform posstart = default;
     [SerializeField] private Transform posfin =default;
     [SerializeField] private GameObject panelTutor1 = default;
     [SerializeField] private GameObject panelTutor2 = default;
-
+    [SerializeField] private ChoisCar _choisCar;
+    
     public bool keytap = false;
     public bool isTap = false;
     private void Start()
     {
         StartCoroutine(starttutor());
+        if (_choisCar.nuberCar == 0)
+        {
+            _tutor1.sprite = _roma;
+            _tutor1Text.text = "Рома";
+            _tutor2.sprite = _roma;
+            _tutor2Text.text = "Рома";
+        }
+        else
+        {
+            _tutor1.sprite = _kate;
+            _tutor1Text.text = "Катя";
+            _tutor2.sprite = _kate;
+            _tutor2Text.text = "Катя";
+        }
     }
 
     IEnumerator starttutor()

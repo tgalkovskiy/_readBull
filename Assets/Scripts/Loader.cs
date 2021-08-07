@@ -20,7 +20,7 @@ public class Loader : MonoBehaviour
         }
         else
         {
-           car2.transform.DOScale(1.3f, 1f); 
+           car2.transform.DOScale(1.3f, 0.5f); 
            car1.transform.DOScale(1.0f, 0.5f);
            choisCar.nuberCar = 1;
         }

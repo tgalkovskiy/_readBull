@@ -37,14 +37,16 @@ public class Drift_Zone : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log(1);
+        time += Time.deltaTime;
         Quaternion rotnowbody = Quaternion.Euler(0,curve.Evaluate(time),0);
-        Quaternion rotnowarrow = Quaternion.Euler(0,0,curve.Evaluate(time)*4f);
+        Quaternion rotnowarrow = Quaternion.Euler(0,0,curve.Evaluate(time)*8f);
         other.gameObject.transform.localRotation *= rotnowbody;
         if (_mainDir.arrow.transform.rotation.z < 0.7f && _mainDir.arrow.transform.rotation.z > -0.7f)
         {
+            Debug.Log(2);
            _mainDir.arrow.transform.rotation *= rotnowarrow; 
         }
-        time += Time.deltaTime;
         if (Mathf.Abs(_mainDir.arrow.transform.rotation.z)>=0f &&  Mathf.Abs(_mainDir.arrow.transform.rotation.z)<0.3f)
         {
             scornow += 3; 
