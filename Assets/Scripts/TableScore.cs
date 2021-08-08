@@ -25,7 +25,7 @@ public class TableScore : MonoBehaviour
                 _name[i].text =
                     $"{_firstName[Random.Range(0, _firstName.Length)]} {_secondName[Random.Range(0, _secondName.Length)]}";
                 _score[i] = _fieldText[i].transform.GetChild(1)?.GetComponent<Text>();
-                _scoreplayer[i] = Random.Range(10000, 15000) - i * 1000;
+                _scoreplayer[i] =Random.Range(14000,15000) - i * 1000;
                 _score[i].text = _scoreplayer[i].ToString();
             }
         }
@@ -37,8 +37,8 @@ public class TableScore : MonoBehaviour
 
     public void ShowCsore(int score)
     {
-        int pos = 6;
-        for(int i =5; i>-1; i--)
+        int pos = _fieldText.Length;
+        for(int i =_fieldText.Length-1; i>-1; i--)
         {       
             if (score > _scoreplayer[i])
             {
